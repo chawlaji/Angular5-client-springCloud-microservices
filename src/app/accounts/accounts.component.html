@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-3">
+    <div class="list-group" id="list-tab" role="tablist">
+      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#{{ account.accId }}" role="tab" *ngFor="let account of accountHolder">Account Id: {{ account.accId }}</a>
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show" id="{{ account.accId }}" role="tabpanel" *ngFor="let account of accountHolder">
+          <h3>Account Details:</h3>
+          <a class="list-group-item list-group-item-action" >Account Id: {{ account.accId }}</a>
+          <a class="list-group-item list-group-item-action" >Customer Id: {{ account.accCustomerId }}</a>
+          <a class="list-group-item list-group-item-action" >Account Number: {{ account.accNumber }}</a>
+          <a class="list-group-item list-group-item-action" ><h4>Accounts Document:</h4>
+            <div class="row">
+                <div class="col-4">
+                  <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#doc{{ account.accNumber }}{{ document.docId }}" role="tab" *ngFor="let document of account.accDocuments">Document Id: {{ document.docId }}</a>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show" id="doc{{ account.accNumber }}{{ document.docId }}" role="tabpanel" *ngFor="let document of account.accDocuments">
+                        <a class="list-group-item list-group-item-action" >Document Id: {{ document.docId }}</a>
+                        <a class="list-group-item list-group-item-action" >For Account Id: {{ document.docAccountId }}</a>
+                        <a class="list-group-item list-group-item-action" >Document Name: {{ document.docName }}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>

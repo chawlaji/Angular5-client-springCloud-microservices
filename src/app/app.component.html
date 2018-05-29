@@ -1,0 +1,104 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="btn-group-vertical btn-group-lg" style="margin-left: 50px; margin-top: 100px;">
+        <button type="button" class="btn btn-primary" routerLink="/customer" (click)="animateArrow('customer')">Customer</button>
+        <button type="button" class="btn btn-secondary" routerLink="/accounts" (click)="animateArrow('account')">Accounts</button>
+        <button type="button" class="btn btn-success" routerLink="/documents" (click)="animateArrow('document')">Document</button>
+      </div>
+    </div>
+    <div class="col-md-10" style="background-color: powderblue">
+      <div class="container" style="height: 500px;">
+
+        <img src="../assets/svgs/iconmonstr-arrow-24.svg" [@runArrow]="state" style="z-index: 1; position: absolute; left: 315px; top: 240px;">
+        <svg width="100%" style="border: 1px solid #0B0B0B; height: 500px; background-color: #F1F1F1;">              
+          <text x="105" y="240" fill="red">Request</text>
+          <line x1="100" y1="250" x2="250" y2="250" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <circle cx="60" cy="250" r="40" stroke="#0B0B0B" stroke-width="2" fill="#FEDAA9" />
+          <text x="38" y="255" fill="red">Client</text>
+          
+          <text x="185" y="130" fill="red">Gateway Service</text>
+          <rect x="180" y="150" width="130" height="200" stroke="#0B0B0B" stroke-width="2" style="fill:#CBCBCB;" />
+          <text x="230" y="175" fill="red">Zuul</text>
+
+          <text x="350" y="130" fill="red">Registering Names</text>
+          <line x1="270px" y1="140" x2="270" y2="190" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="270" y1="140" x2="520" y2="140" style="stroke:rgb(255,0,0);stroke-width:2" />
+          
+          <text x="440" y="190" fill="red">Request</text>
+          <line x1="310" y1="170" x2="520" y2="170" style="stroke:rgb(255,0,0);stroke-width:2" />
+          
+          <line x1="310" y1="260" x2="340" y2="260" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="340" y1="260" x2="340" y2="290" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="340" y1="290" x2="370" y2="290" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+          <rect x="215" y="190" width="70" height="140" stroke="#0B0B0B" stroke-width="2" style="fill:#E4E4E4;" />
+          <text x="225" y="240" fill="red">Service
+            <tspan x="225" y="255">Name</tspan>
+            <tspan x="225" y="270">List</tspan>
+          </text>
+          
+          <line x1="250" y1="330" x2="250" y2="360" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="250" y1="360" x2="490" y2="360" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="490" y1="360" x2="490" y2="320" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="490" y1="320" x2="520" y2="320" style="stroke:rgb(255,0,0);stroke-width:2" />
+          
+          <text x="330" y="445" fill="red">Registering Names</text>
+          <line x1="240" y1="330" x2="240" y2="455" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="240" y1="455" x2="520" y2="455" style="stroke:rgb(255,0,0);stroke-width:2" />
+          
+          
+          <text x="350" y="210" fill="red">Discovery Service</text>
+          <rect x="370" y="220" width="70" height="130" stroke="#0B0B0B" stroke-width="2" style="fill:#99D1F1;" />\
+          <text x="380" y="285" fill="red">Eureka</text>
+          
+
+          <text x="550" y="110" fill="red">MICROSERVICES</text>
+          <rect x="520" y="130" width="200" height="70" stroke="#0B0B0B" stroke-width="2" style="fill:#E4E4E4;" />
+          <text x="550" y="170" fill="red">Customer Service</text>
+          
+          <line x1="720" y1="165" x2="785" y2="165" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="165" x2="785" y2="190" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="190" x2="850" y2="190" style="stroke:rgb(255,0,0);stroke-width:2" />
+          
+          <rect x="520" y="270" width="200" height="70" stroke="#0B0B0B" stroke-width="2" style="fill:#E4E4E4;" />
+          <text x="560" y="310" fill="red">Account Service</text>
+          
+          <line x1="720" y1="290" x2="785" y2="290" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="290" x2="785" y2="220" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="220" x2="850" y2="220" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+          <line x1="720" y1="320" x2="785" y2="320" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="320" x2="785" y2="350" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="350" x2="850" y2="350" style="stroke:rgb(255,0,0);stroke-width:2" />
+          
+
+          <rect x="520" y="390" width="200" height="70" stroke="#0B0B0B" stroke-width="2" style="fill:#E4E4E4;" />
+          <text x="555" y="430" fill="red">Document Service</text>
+
+          <line x1="720" y1="450" x2="785" y2="450" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="450" x2="785" y2="380" style="stroke:rgb(255,0,0);stroke-width:2" />
+          <line x1="785" y1="380" x2="850" y2="380" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+          <text x="820" y="150" fill="red">Managed By Feign 
+            <tspan x="860" y="170">Client</tspan>
+          </text>
+          <rect x="850" y="185" width="70" height="70" stroke="#0B0B0B" stroke-width="2" style="fill:#E4E4E4;" />
+          <text x="855" y="215" fill="red">Account 
+            <tspan x="860" y="235">Client</tspan>
+          </text>
+          
+          <text x="820" y="295" fill="red">Managed By Feign 
+            <tspan x="860" y="315">Client</tspan>
+          </text>
+          <rect x="850" y="330" width="75" height="70" stroke="#0B0B0B" stroke-width="2" style="fill:#E4E4E4;" />
+          <text x="850" y="360" fill="red">Document 
+            <tspan x="865" y="380">Client</tspan>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </div>  
+  <hr>
+  <router-outlet></router-outlet>
+</div>
